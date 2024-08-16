@@ -3,7 +3,7 @@
 package query
 
 import (
-	coretypes "github.com/cometbft/cometbft/rpc/core/types"
+	coretypes "github.com/tendermint/tendermint/rpc/core/types"
 )
 
 // StatusRPC returns information about a node status

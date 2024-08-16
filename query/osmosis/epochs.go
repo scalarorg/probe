@@ -5,7 +5,7 @@ import (
 
 	epochsTypes "github.com/DefiantLabs/probe/client/codec/osmosis/v15/x/epochs/types"
 	queryTypes "github.com/DefiantLabs/probe/query"
-	coretypes "github.com/cometbft/cometbft/rpc/core/types"
+	coretypes "github.com/tendermint/tendermint/rpc/core/types"
 )
 
 func EpochsAtHeightRPC(q *queryTypes.Query, height int64) (*epochsTypes.QueryEpochsInfoResponse, error) {

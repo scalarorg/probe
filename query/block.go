@@ -3,7 +3,7 @@
 package query
 
 import (
-	coretypes "github.com/cometbft/cometbft/rpc/core/types"
+	coretypes "github.com/tendermint/tendermint/rpc/core/types"
 )
 
 func BlockResultsRPC(q *Query) (*coretypes.ResultBlockResults, error) {

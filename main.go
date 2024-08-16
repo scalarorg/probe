@@ -11,7 +11,7 @@ import (
 	osmosisQueryTypes "github.com/DefiantLabs/probe/query/osmosis"
 	cosmosTypes "github.com/cosmos/cosmos-sdk/types"
 	cquery "github.com/cosmos/cosmos-sdk/types/query"
-	ibcChanTypes "github.com/cosmos/ibc-go/v7/modules/core/04-channel/types"
+	// ibcChanTypes "github.com/cosmos/ibc-go/v7/modules/core/04-channel/types"
 )
 
 func main() {
@@ -153,8 +153,8 @@ var handlers = map[string]func(cosmosTypes.Msg){
 		fmt.Printf("%s swapped %s\n", swapExactAmountOut.Sender, swapExactAmountOut.TokenOut)
 	},
 	"/ibc.core.channel.v1.MsgAcknowledgement": func(currMsg cosmosTypes.Msg) {
-		ack := currMsg.(*ibcChanTypes.MsgAcknowledgement)
-		fmt.Printf("%s acked with result %s\n", ack.Signer, ack.Acknowledgement)
+		// ack := currMsg.(*ibcChanTypes.MsgAcknowledgement)
+		// fmt.Printf("%s acked with result %s\n", ack.Signer, ack.Acknowledgement)
 	},
 	"/osmosis.poolmanager.v1beta1.MsgSwapExactAmountIn": func(currMsg cosmosTypes.Msg) {
 		swapExactAmountIn := currMsg.(*poolmanagerTypes.MsgSwapExactAmountIn)

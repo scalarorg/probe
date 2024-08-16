@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	abci "github.com/cometbft/cometbft/abci/types"
+	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/cosmos/cosmos-sdk/store/rootmulti"
 	gogogrpc "github.com/cosmos/gogoproto/grpc"
 	"google.golang.org/grpc"
@@ -18,7 +18,7 @@ import (
 	"google.golang.org/grpc/encoding/proto"
 	"google.golang.org/grpc/metadata"
 
-	rpcclient "github.com/cometbft/cometbft/rpc/client"
+	rpcclient "github.com/tendermint/tendermint/rpc/client"
 	"github.com/cosmos/cosmos-sdk/codec/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 	grpctypes "github.com/cosmos/cosmos-sdk/types/grpc"

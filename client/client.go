@@ -7,10 +7,10 @@ import (
 	"path"
 	"time"
 
-	"github.com/cometbft/cometbft/libs/log"
-	rpcclient "github.com/cometbft/cometbft/rpc/client"
-	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
-	libclient "github.com/cometbft/cometbft/rpc/jsonrpc/client"
+	"github.com/tendermint/tendermint/libs/log"
+	rpcclient "github.com/tendermint/tendermint/rpc/client"
+	rpchttp "github.com/tendermint/tendermint/rpc/client/http"
+	libclient "github.com/tendermint/tendermint/rpc/jsonrpc/client"
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
 )
 
@@ -43,7 +43,9 @@ func NewChainClient(ccc *ChainClientConfig, homepath string, input io.Reader, ou
 
 func (cc *ChainClient) Init() error {
 	// TODO: test key directory and return error if not created
-	keybase, err := keyring.New(cc.Config.ChainID, cc.Config.KeyringBackend, cc.Config.KeyDirectory, cc.Input, cc.Codec.Marshaler, cc.KeyringOptions...)
+	// TODO_SCALAR: Confirm if remove Marshaler could be a problem
+	// keybase, err := keyring.New(cc.Config.ChainID, cc.Config.KeyringBackend, cc.Config.KeyDirectory, cc.Input, cc.Codec.Marshaler, cc.KeyringOptions...)
+	keybase, err := keyring.New(cc.Config.ChainID, cc.Config.KeyringBackend, cc.Config.KeyDirectory, cc.Input, cc.KeyringOptions...)
 	if err != nil {
 		return err
 	}

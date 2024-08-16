@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/DefiantLabs/probe/client"
-	coretypes "github.com/cometbft/cometbft/rpc/core/types"
+	coretypes "github.com/tendermint/tendermint/rpc/core/types"
 	grpctypes "github.com/cosmos/cosmos-sdk/types/grpc"
 	txTypes "github.com/cosmos/cosmos-sdk/types/tx"
 	"google.golang.org/grpc/metadata"
